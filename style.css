@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+:root {
+  --line-fill-active:#3498db;
+  --line-fill-noactive:#e0e0e0;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #f6f7fb;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  overflow: hidden;
+  height: 100vh;
+}
+.container {
+  text-align: center;
+  
+}
+
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 30px;
+  width: 350px;
+  max-width: 100%;
+}
+.progress-container::before {
+  content: '';
+  height: 4px;
+  background-color: var(--line-fill-noactive);
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  left:0;
+  top:50%;
+  transform: translateY(-50%);
+}
+.progress {
+  content: '';
+  height: 4px;
+  background-color: var(--line-fill-active);
+  width: 0%;
+  z-index: -1;
+  position: absolute;
+  left:0;
+  top:50%;
+  transform: translateY(-50%);
+}
+.circle {
+background-color: #f6f7fb;
+border: 3px solid var(--line-fill-noactive);
+border-radius: 50%;
+width: 30px;
+height: 30px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 14px;
+font-weight: 700;
+color: var(--line-fill-noactive);
+margin: 30px 0;
+}
+button {
+  padding: 8px 30px;
+  font-size: 14px;
+  background-color: #3498db;
+  border: 0;
+  border-radius: 6px;
+  margin:0 10px;
+  cursor: pointer;
+}
+button:active {
+  scale: 0.98;
+}
+button:focus {
+  outline: none;
+}
+button:disabled {
+  background-color: var(--line-fill-noactive);
+}
+.circle.active {
+  border-color: var(--line-fill-active);
+  color:var(--line-fill-active)
+}
+
+
+
+
